@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "qt-rfb-threat-model",
+    "owner": "azril",
+    "description": "High level threat model of qt-rfb"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "azril"
+  }
+}
