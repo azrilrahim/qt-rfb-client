@@ -270,6 +270,8 @@ void rfbclientcls::getRFBOpsType()
 {
     unsigned char msgType;
 
+    if (!this->sendClientFrameBufferRequestUpdate(0,0,this->serverFBWidth,this->serverFBHeight,0))
+        return;
 
     if (this->readFromRFBServer((unsigned char*)&msgType,1) != 1)
         return;
@@ -782,7 +784,7 @@ bool rfbclientcls::handleServerInitProtocol()
     //qDebug("name length is %d",rfbSID.fbNameLength);
     //qDebug("server name is %s",QString(vncServerData.mid(24,rfbSID.fbNameLength)).toStdString().c_str());
 
-    return this->sendClientFrameBufferRequestUpdate(0,0,rfbSID.fbWidth,rfbSID.fbHeight,0);
+    // return this->sendClientFrameBufferRequestUpdate(0,0,rfbSID.fbWidth,rfbSID.fbHeight,0);
 
     return true;
 }

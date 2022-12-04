@@ -26,7 +26,7 @@
  */
 
 #include <QApplication>
-#include "vncclientwidgetcls.h"
+// #include "vncclientwidgetcls.h"
 #include "rfbclientwidgetcls.h"
 #include "vncclientwidget2cls.h"
 
